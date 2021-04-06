@@ -1,0 +1,23 @@
+drone_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  revolve_bright_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: revolve_bright
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  revolve_fright_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: revolve_fright
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  revolve_fleft_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: revolve_fleft
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  revolve_bleft_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: revolve_bleft
+    pid: {p: 100.0, i: 0.01, d: 10.0}

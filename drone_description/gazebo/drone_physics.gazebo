@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<robot name="drone" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<xacro:property name="standard_friction" value="1.0" />
+<xacro:property name="propeller_friction" value="10.0" />
+
+<gazebo reference="base_link">
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+  <gravity>true</gravity>
+</gazebo>
+
+<gazebo reference="propeller_bright_1">
+  <mu1>${propeller_friction}</mu1>
+  <mu2>${propeller_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="propeller_fright_1">
+  
+  <mu1>${propeller_friction}</mu1>
+  <mu2>${propeller_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="propeller_fleft_1">
+  
+  <mu1>${propeller_friction}</mu1>
+  <mu2>${propeller_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="propeller_bleft_1">
+  
+  <mu1>${propeller_friction}</mu1>
+  <mu2>${propeller_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="stopper_fright_1">
+  
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="stopper_bright_1">
+  
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="stopper_fleft_1">
+  
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="stopper_bleft_1">
+  
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="motor_fright_1">
+  
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="motor_bright_1">
+  
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="motor_bleft_1">
+  
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="motor_fleft_1">
+  
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="lidar_1">
+  
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="camera_1">
+  
+  <mu1>${standard_friction}</mu1>
+  <mu2>${standard_friction}</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+</robot>

@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<robot name="drone" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<xacro:property name="body_color" value="Gazebo/Blue" />
+<xacro:property name="motor_color" value="Gazebo/Silver" />
+<xacro:property name="sensor_color" value="Gazebo/Red" />
+<xacro:property name="stopper_color" value="Gazebo/Black" />
+<xacro:property name="propeller_color" value="Gazebo/Yellow" />
+
+<gazebo reference="base_link">
+  <material>${body_color}</material>
+</gazebo>
+
+<gazebo reference="propeller_bright_1">
+  <material>${propeller_color}</material>
+</gazebo>
+
+<gazebo reference="propeller_fright_1">
+  <material>${propeller_color}</material>
+</gazebo>
+
+<gazebo reference="propeller_fleft_1">
+  <material>${propeller_color}</material>
+</gazebo>
+
+<gazebo reference="propeller_bleft_1">
+  <material>${propeller_color}</material>
+</gazebo>
+
+<gazebo reference="stopper_fright_1">
+  <material>${stopper_color}</material>
+</gazebo>
+
+<gazebo reference="stopper_bright_1">
+  <material>${stopper_color}</material>
+</gazebo>
+
+<gazebo reference="stopper_fleft_1">
+  <material>${stopper_color}</material>
+</gazebo>
+
+<gazebo reference="stopper_bleft_1">
+  <material>${stopper_color}</material>
+</gazebo>
+
+<gazebo reference="motor_fright_1">
+  <material>${motor_color}</material>
+</gazebo>
+
+<gazebo reference="motor_bright_1">
+  <material>${motor_color}</material>
+</gazebo>
+
+<gazebo reference="motor_bleft_1">
+  <material>${motor_color}</material>
+</gazebo>
+
+<gazebo reference="motor_fleft_1">
+  <material>${motor_color}</material>
+</gazebo>
+
+<gazebo reference="lidar_1">
+  <material>${sensor_color}</material>
+</gazebo>
+
+<gazebo reference="camera_1">
+  <material>${sensor_color}</material>
+</gazebo>
+
+</robot>
