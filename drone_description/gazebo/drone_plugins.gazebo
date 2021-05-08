@@ -76,4 +76,89 @@
     </sensor>
   </gazebo>
 
+<!-- Define the lift-Drag plugin -->
+	<gazebo>
+		<!-- Provide a Positive Velocity -->
+		<plugin name="propeller_fright" filename="libLiftDragPlugin.so">
+			<a0>0.1</a0>
+			<cla>0.1</cla>
+			<cda>0.01</cda>
+			<cma>0.0</cma>
+			<alpha_stall>0.2</alpha_stall>
+			<cla_stall>-0.2</cla_stall>
+			<cda_stall>1.0</cda_stall>
+			<cma_stall>0.0</cma_stall>
+			<cp>0 0.5 0</cp>
+			<area>0.762</area>
+			<air_density>1.2041</air_density>
+			<forward>1 0 0</forward>
+			<upward>0 0 -1</upward>
+			<link_name>propeller_fright_1</link_name>
+			<control_joint>revolve_fright</control_joint>
+		</plugin>
+	</gazebo>
+	
+	<gazebo>
+		<!-- Provide a Negative Velocity -->
+		<plugin name="propeller_bright" filename="libLiftDragPlugin.so">
+			<a0>0.1</a0>
+			<cla>0.1</cla>
+			<cda>0.01</cda>
+			<cma>0.0</cma>
+			<alpha_stall>0.2</alpha_stall>
+			<cla_stall>-0.2</cla_stall>
+			<cda_stall>1.0</cda_stall>
+			<cma_stall>0.0</cma_stall>
+			<cp>0 0.5 0</cp>
+			<area>0.762</area>
+			<air_density>1.2041</air_density>
+			<forward>1 0 0</forward>
+			<upward>0 0 1</upward>
+			<link_name>propeller_bright_1</link_name>
+			<control_joint>revolve_bright</control_joint>
+		</plugin>
+	</gazebo>
+	
+	<gazebo>
+		<!-- Provide a Negative Velocity -->
+		<plugin name="propeller_fleft" filename="libLiftDragPlugin.so">
+			<a0>0.1</a0>
+			<cla>0.1</cla>
+			<cda>0.01</cda>
+			<cma>0.0</cma>
+			<alpha_stall>0.2</alpha_stall>
+			<cla_stall>-0.2</cla_stall>
+			<cda_stall>1.0</cda_stall>
+			<cma_stall>0.0</cma_stall>
+			<cp>0 0.5 0</cp>
+			<area>0.762</area>
+			<air_density>1.2041</air_density>
+			<forward>1 0 0</forward>
+			<upward>0 0 1</upward>
+			<link_name>propeller_fleft_1</link_name>
+			<control_joint>revolve_fleft</control_joint>
+		</plugin>
+	</gazebo>
+	
+	<gazebo>
+		<!-- Provide a Positive Velocity -->
+		<plugin name="propeller_bleft" filename="libLiftDragPlugin.so">
+			<a0>0.1</a0>
+			<cla>0.1</cla>
+			<cda>0.01</cda>
+			<cma>0.0</cma>
+			<alpha_stall>0.2</alpha_stall>
+			<cla_stall>-0.2</cla_stall>
+			<cda_stall>1.0</cda_stall>
+			<cma_stall>0.0</cma_stall>
+			<cp>0 0.5 0</cp>
+			<area>0.762</area>
+			<air_density>1.2041</air_density>
+			<forward>1 0 0</forward>
+			<upward>0 0 -1</upward>
+			<link_name>propeller_bleft_1</link_name>
+			<control_joint>revolve_bleft</control_joint>
+		</plugin>
+	</gazebo>
+
 </robot>
