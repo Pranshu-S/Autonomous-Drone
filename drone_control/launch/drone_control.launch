@@ -6,4 +6,4 @@
       <remap from="/joint_states" to="/drone/joint_states"/>
     </node>
     
-    </launch>
+</launch>

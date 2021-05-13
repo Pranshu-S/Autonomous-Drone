@@ -1,8 +1,5 @@
 <launch>
-  <param command="$(find xacro)/xacro $(find drone_description)/urdf/drone.xacro" name="robot_description"/>
-  <node args="-param robot_description -urdf -model drone" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
-  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="paused" value="false"/>
     <arg name="use_sim_time" value="true"/>
@@ -10,4 +7,25 @@
     <arg name="headless" value="false"/>
     <arg name="debug" value="false"/>
   </include>
+
+
+  <param name="robot_description" command="$(find xacro)/xacro $(find drone_description)/urdf/drone.xacro"/>
+
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-param robot_description -urdf -model drone"  />
+
+	<rosparam file="$(find drone_control)/config/drone_control.yaml" command="load" ns="/drone"/>
+
+  <node name="control_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="/drone"
+          args="revolve_bright_position_controller 
+          revolve_fright_position_controller 
+          revolve_fleft_position_controller 
+          revolve_bleft_position_controller 
+          joint_state_controller" />
+
+  <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /> -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+    <!--<remap from="/joint_states" to="/Kwad/joint_states" />-->		
+    <param name="publish_frequency" type="double" value="5.0" />
+  </node>
+
 </launch>

@@ -4,10 +4,10 @@
 <transmission name="revolve_bright_tran">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="revolve_bright">
-    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="revolve_bright_actr">
-    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
@@ -15,10 +15,10 @@
 <transmission name="revolve_fright_tran">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="revolve_fright">
-    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="revolve_fright_actr">
-    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
@@ -26,10 +26,10 @@
 <transmission name="revolve_fleft_tran">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="revolve_fleft">
-    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="revolve_fleft_actr">
-    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
@@ -37,10 +37,10 @@
 <transmission name="revolve_bleft_tran">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="revolve_bleft">
-    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
   </joint>
   <actuator name="revolve_bleft_actr">
-    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
